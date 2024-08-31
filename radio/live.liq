@@ -86,8 +86,7 @@ def check_if_preferred_livesource(set_is_preferred_livesource, source) =
   callback
 end
 
-srt1 = input.srt(id="input_srt1",
-                 port=10000)
+srt1 = input.srt(id="input_srt1",host="SECRT",port=9097,mode="caller")
 
 # Get metrics
 latency_metric(label_values=["default","input","srt1"],srt1)
